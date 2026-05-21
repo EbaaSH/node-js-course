@@ -26,4 +26,7 @@ router.post('/signup',[
     body('password').trim().isLength({min:8})
 ],authController.signup);
 
+router.post('/login', authController.login);
+
+
 module.exports = router;
