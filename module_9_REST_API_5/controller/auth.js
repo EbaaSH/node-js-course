@@ -68,7 +68,7 @@ exports.login = (req,res,next) => {
                     userId: loadedUser._id.toString()
                 },'somesupersecretsecret',
                 {expiresIn: '1h'}
-            );
+            ); 
             res.status(200).json({ message: 'Login successful!', token: token ,userId: loadedUser._id.toString()});
         });
     })
