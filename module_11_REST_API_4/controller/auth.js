@@ -1,5 +1,5 @@
 
-const User = require('../models/User');
+const User = require('../models/user');
 
 const {validationResult } = require('express-validator');
 
@@ -35,11 +35,6 @@ exports.signup = (req,res,next) => {
             err.statusCode = 500;
         }
         next(err);
-    })
-    const user = new User({
-        email: email,
-        name: name,
-        password: password
     })
 }
 
